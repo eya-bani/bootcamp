@@ -1,0 +1,651 @@
+/*--------------initialisation--start--------------*/
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth     ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --color-red: rgb(177, 28, 33);
+    --color-black: #111111;
+    --color-gray: #757575;
+    --color-white: white;
+}
+
+.b1 {
+    margin-top: 15px;
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+button {
+    font-size: 1rem;
+    padding: 6px 20px;
+    border-radius: 30px;
+    background-color: var(--color-red);
+    border: 2px solid var(--color-red);
+    color: var(--color-white);
+    font-weight: 600;
+
+}
+
+button:hover {
+    box-shadow: 0px 0px 73px 35px var(--color-red);
+}
+
+span {
+    color: var(--color-red);
+}
+
+/*--------------initialisation--end-------------*/
+/*----------------navbar---start------------*/
+.nava {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.nava div ul {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+}
+
+.nava div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.nava div .two {
+    display: none;
+}
+
+.nava div ul li {
+    position: relative;
+    padding: 7px 15px;
+    overflow: scroll;
+}
+
+.nava div ul li::-webkit-scrollbar {
+    display: none;
+}
+
+.nava div ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 0%;
+    border-bottom: 2px solid var(--color-gray);
+    border-right: 2px solid var(--color-gray);
+}
+
+.nava div ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    border-top: 2px solid var(--color-gray);
+    border-left: 2px solid var(--color-gray);
+}
+
+.nava div ul li:hover:before {
+    width: 100%;
+    height: 100%;
+    animation: nas .3s ease;
+}
+
+.nava div ul li:hover:after {
+    width: 100%;
+    height: 100%;
+    animation: nas .3s ease;
+}
+
+
+
+
+/*----------------navbar---end-----------*/
+
+/*----------------home---start----------*/
+#home {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+#home .des {
+    width: fit-content;
+    height: fit-content;
+
+}
+
+#home .img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .img img {
+    width: 100%;
+    height: 400px;
+}
+
+#home h1 {
+    margin: 0;
+}
+
+/*----------------home---end---------*/
+
+/*----------------about--start----------*/
+#about {
+    width: 100%;
+    height: 100%;
+
+}
+
+#about .video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .video video {
+    width: 100%;
+
+}
+
+#about .desc p {
+    color: var(--color-gray);
+}
+
+/*----------------about--end---------*/
+
+/*----------------product--start----------*/
+#Product {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+
+}
+
+#Product img {
+    width: 100%;
+
+
+}
+
+#Product .cards .card {
+    background-color: var(--color-white);
+
+}
+
+
+
+#Product h1 {
+    color: var(--color-red);
+}
+
+#Product h2 {
+    margin-top: 0;
+}
+
+/*----------------product---end---------*/
+
+/*----------------blog--start----------*/
+#blog {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#blog>div {
+    width: 100%;
+    height: 100%;
+}
+
+#blog h1 {
+    font-weight: 900;
+    margin: 0;
+}
+
+#blog button {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 2px solid var(--color-black);
+    margin-top: 20px;
+}
+
+#blog .title {
+
+    text-align: center;
+
+}
+
+
+/*----------------blog--end---------*/
+/*----------------contact--start--------*/
+.contact {
+    width: 100%;
+    height: 100%;
+    background-image: url(./pexels-photo-5771895.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.contact h1 {
+    text-align: center;
+    color: var(--color-white);
+}
+
+.contact form div input {
+    width: 100%;
+    height: 100%;
+    border-color: transparent;
+    border-bottom: 2px solid var(--color-red);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.contact form {
+    padding: 10px;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    padding: 1rem 2rem;
+}
+
+.contact form textarea {
+    width: 100%;
+    height: 100%;
+    border-color: transparent;
+    border-bottom: 2px solid var(--color-red);
+    padding-top: 30px;
+}
+
+.contact form .send {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+/*----------------cintact--end---------*/
+
+/*---------------footer-start--------*/
+footer {
+    background-color: var(--color-black);
+    width: 100%;
+    height: 100%;
+}
+
+footer div ul {
+    font-weight: 600;
+    list-style: none;
+}
+
+footer div ul li {
+    margin-top: 10px;
+}
+
+footer div ul li:nth-child(1),
+footer div ul:nth-child(1) {
+    color: var(--color-white);
+}
+
+footer div ul:nth-child(2),
+footer div ul:nth-child(3),
+footer p {
+    color: var(--color-gray);
+}
+
+footer div ul li:hover {
+    color: var(--color-white);
+}
+
+/*---------------footer-end-------*/
+
+/*-------------mediaquery--start---------*/
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    /*----------------------------home--start---------------------------*/
+    #home {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20vh 7vw 2vh 7vw;
+    }
+
+    #home h1 {
+        font-size: 14.5vw;
+    }
+
+
+    #about {
+        margin-top: 3vh;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        padding: 10vh 7vw 5vh 7vw;
+    }
+
+    /*---------------------home--end------------------------------------*/
+     /*---------------------product--start----------------------------------*/
+    #Product .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 2vh;
+    }
+
+    #Product .cards .card .price {
+        padding: 2vh 5vw;
+    }
+
+    #Product {
+        padding: 5vh 7vw;
+    }
+
+    /*-------------------------product--end--------------------------------*/
+        /*-----------------------blog--start-------------------------------*/
+    #blog {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10vh 7vw 2vh 7vw;
+    }
+    /*-----------------------blog--end-------------------------------*/
+       /*----------------------contact--start--------------------------*/
+    .contact {
+        padding: 5vh 5vw;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+    /*----------------------contact--end--------------------------*/
+       /*----------------------footer--start-------------------------*/
+    footer div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    footer {
+        padding: 4vh 7vw;
+    }
+           /*----------------------footer----end----------------------*/
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+     /*------------------------home-start--------------------------------*/
+    #home {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20vh 7vw 5vh 7vw;
+    }
+
+    #home h1 {
+        font-size: 14.5vw;
+    }
+   /*------------------------home-end-----------------------------*/
+    /*-----------------------about---start-------------------------------*/
+    #about {
+        margin-top: 3vh;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        padding: 10vh 7vw 5vh 7vw;
+    }
+
+    /*------------------------about--end---------------------------------*/
+     /*-----------------------product---start-------------------------------*/
+    #Product .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding-top: 2vh;
+    }
+
+    #Product .cards .card .price {
+        padding: 2vh 5vw;
+    }
+
+    #Product {
+        padding: 5vh 7vw;
+    }
+
+     /*-----------------------product---end-------------------------------*/
+    /*----------------------------blog---start--------------------------*/
+    #blog {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 5vh 7vw 5vh 7vw;
+    }
+
+    #blog h1 {
+        font-size: 4vw;
+    }
+      /*----------------------------blog---end--------------------------*/
+  /*----------------------------blog----------------------------*/
+    .contact {
+        padding: 5vh 5vw;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    footer div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    footer {
+        padding: 4vh 7vw;
+    }
+}
+
+@media screen and (min-width:769px) {
+    #home {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 35vh 7vw 2vh 7vw;
+    }
+
+    #home h1 {
+        font-size: 4vw;
+    }
+
+    #home div:nth-child(2) {
+        width: 100%;
+        height: 50%;
+    }
+
+    #home .des .b1 {
+        margin-top: 150px;
+    }
+
+
+    #home .img img {
+        width: 100%;
+        height: 650px;
+        transform: scale(1.2);
+    }
+
+    /*--------------------------------------------------*/
+    #about {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15vh 7vw 15vh 7vw;
+    }
+
+
+
+    #about .video .video {
+        width: 100;
+        height: 100;
+    }
+
+    #about video {
+        width: 500px;
+        height: 600px;
+    }
+
+    /*---------------------------------------------------------*/
+    #Product .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding-top: 2vh;
+    }
+
+    #Product .cards .card .price {
+        padding: 2vh 2vw;
+    }
+
+    #Product {
+        padding: 5vh 7vw 20vh 7vw;
+    }
+
+    /*---------------------------------------------------------*/
+    #blog {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 8vh 8vw 8vh 8vw;
+    }
+
+    #blog h1 {
+        font-size: 5vw;
+    }
+
+    .contact form div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+    }
+
+    .contact {
+        padding: 10vh 5vw;
+    }
+
+    footer {
+        padding: 4vh 2vw;
+    }
+
+    footer div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 30px;
+    }
+}
+
+
+
+
+/*-------------mediaquery--end----------*/
+
+
+
+
+
+
+
+
+/*-----------navbar--mediaquery--start-----*/
+@media screen and (max-width:1024px) {
+    .nava div ul {
+        display: none;
+    }
+
+    .nava div .one {
+        display: none;
+    }
+
+    .nava div .two {
+        display: block;
+    }
+}
+
+
+
+
+
+
+/*-----------navbar--mediaquery--start-----*/
+/*-----------keyfram-start-----*/
+@keyframes nas {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*-----------keyfram-end-----*/
